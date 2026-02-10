@@ -3,12 +3,12 @@ import '../styles/heart.css'
 
 export default function Heart({
   active,
-  imageHref = '/assets/us.jpg',
+  imageHref = '/assets/gugiwowval.jpg',
   imageOffsetX = 0,
   imageOffsetY = 0,
   imageScale = 1
 }){
-  const src = imageHref || '/assets/gugiwowval.jpg'
+  const src = imageHref
 
   return (
     <div className={'heart-wrap' + (active ? ' active' : '')} aria-hidden>
