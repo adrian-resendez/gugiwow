@@ -8,7 +8,7 @@ export default function Heart({
   imageOffsetY = 0,
   imageScale = 1
 }){
-  const src = imageHref || '/assets/us.jpg'
+  const src = imageHref || '/assets/gugiwowval.jpg'
 
   return (
     <div className={'heart-wrap' + (active ? ' active' : '')} aria-hidden>
