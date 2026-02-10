@@ -1,0 +1,73 @@
+.question-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  text-align:center;
+}
+.question-text{
+  font-size:clamp(20px,4vw,28px);
+  font-weight:700;
+  color:#5b2b3a;
+  letter-spacing:0.2px;
+}
+.buttons{
+  position:relative;
+  width:320px;
+  height:72px;
+}
+.btn{
+  appearance:none;
+  border:none;
+  cursor:pointer;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:16px;
+  box-shadow: 0 6px 14px var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn:active{ transform: translateY(1px) }
+
+.btn.yes{
+  background: linear-gradient(180deg,#ff7aa6,#ff5b8a);
+  color: white;
+  margin-right:24px;
+}
+.btn.no{
+  position:fixed;
+  left:0;
+  top:0;
+  transform: translate3d(0,0,0);
+  background: linear-gradient(180deg,#fff,#ffeef2);
+  color:#8a4354;
+  box-shadow: 0 8px 18px rgba(122,91,107,0.12);
+  opacity: 0;
+  transition: opacity .22s ease;
+}
+
+.btn:hover{ transform: translateY(-4px) }
+
+/* Floating hearts after accept */
+.floating-hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
+.fheart{
+  position:absolute;
+  bottom:-20px;
+  font-size:22px;
+  animation: rise 3.6s linear infinite;
+  opacity:0.95;
+  transform: translateY(0);
+}
+@keyframes rise{
+  0%{ transform: translateY(0) scale(0.9); opacity:1}
+  100%{ transform: translateY(-120vh) scale(1.15); opacity:0}
+}
+
+@media (max-width:600px){
+  .buttons{ width:260px; height:64px }
+  .btn{ padding:12px 18px }
+}
